@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Temperature Converter</h4>
+    <p>Type a value in the F to convert the value to C</p>
+    <label for="F"></label>
+    <input onchange="convert()" id="F" type="text">
+    <p class="out"></p>
+
+    <script>
+        function convert(){
+            let F= document.getElementById('F').value;
+            let out =document.querySelector('.out')
+            value=(F-32)/1.8;
+            out.innerHTML="Celcius: " + value;
+        }
+    </script>
+</body>
+</html>
